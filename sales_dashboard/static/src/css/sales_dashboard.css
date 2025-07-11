@@ -1,0 +1,250 @@
+.sales_dashboard_main {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.sales_dashboard_header {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sales_dashboard_header h2 {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.sales_dashboard_content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sales_card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.sales_card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.sales_card .card-body {
+    padding: 20px;
+}
+
+.sales_card .card-title {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.sales_card .card-text {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+}
+
+.sales_card .card-icon {
+    opacity: 0.7;
+}
+
+.sales_card .card-icon i {
+    font-size: 2.5em;
+    color: #6c757d;
+}
+
+/* Status Items */
+.status-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    margin-bottom: 10px;
+}
+
+.status-count {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.status-count.draft {
+    color: #17a2b8;
+}
+
+.status-count.confirmed {
+    color: #28a745;
+}
+
+.status-count.cancelled {
+    color: #dc3545;
+}
+
+.status-label {
+    font-size: 0.85em;
+    color: #6c757d;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Chart containers */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px 12px 0 0 !important;
+    border: none;
+    padding: 15px 20px;
+}
+
+.card-header h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Button groups */
+.btn-group .btn {
+    border-radius: 20px;
+    margin: 0 2px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-group .btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Table styling */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    border-top: none;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sales_dashboard_main {
+        padding: 10px;
+    }
+
+    .sales_dashboard_header {
+        padding: 15px;
+    }
+
+    .sales_dashboard_header .row {
+        flex-direction: column;
+    }
+
+    .sales_dashboard_header .col-md-6:last-child {
+        text-align: left !important;
+        margin-top: 15px;
+    }
+
+    .sales_card .card-text {
+        font-size: 1.5em;
+    }
+
+    .sales_card .card-icon i {
+        font-size: 2em;
+    }
+}
+
+/* Custom scrollbar */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animation for cards */
+.sales_card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Custom colors for different metrics */
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-info {
+    color: #17a2b8 !important;
+}

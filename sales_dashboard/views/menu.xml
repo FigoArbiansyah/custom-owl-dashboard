@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Sales Dashboard Menu -->
+        <menuitem id="menu_sales_dashboard_root"
+                  name="Sales Dashboard"
+                  sequence="1"
+                  web_icon="sales_dashboard,static/description/icon.png"/>
+
+        <menuitem id="menu_sales_dashboard"
+                  name="Dashboard"
+                  parent="menu_sales_dashboard_root"
+                  action="action_sales_dashboard"
+                  sequence="1"/>
+    </data>
+</odoo>

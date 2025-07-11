@@ -1,34 +1,31 @@
-# -*- coding: utf-8 -*-
 {
-    'name': "custom_owl_dashboard",
-
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
-
+    'name': 'Sales Dashboard',
+    'version': '17.0.1.0.0',
+    'category': 'Sales',
+    'author': "Figo Arbiansyah",
+    'website': "https://www.figo.my.id",
+    'summary': 'Custom Sales Order Dashboard with OWL JS',
     'description': """
-Long description of module's purpose
+        Custom Dashboard untuk Sales Order dengan fitur:
+        - Ringkasan penjualan per periode
+        - Total omzet
+        - Status order (processed, pending, cancelled)
     """,
-
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
-
-    # always loaded
+    'depends': ['base', 'sale', 'web'],
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        'views/sales_dashboard_views.xml',
+        'views/menu.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'assets': {
+        'web.assets_backend': [
+            'sales_dashboard/static/src/js/sales_dashboard.js',
+            'sales_dashboard/static/src/xml/sales_dashboard.xml',
+            'sales_dashboard/static/src/css/sales_dashboard.css',
+        ],
+    },
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Sales Dashboard Action -->
+        <record id="action_sales_dashboard" model="ir.actions.client">
+            <field name="name">Sales Dashboard</field>
+            <field name="tag">sales_dashboard</field>
+            <field name="target">current</field>
+        </record>
+
+        <!-- Sales Dashboard View -->
+        <record id="view_sales_dashboard" model="ir.ui.view">
+            <field name="name">sales.dashboard.view</field>
+            <field name="model">sales.dashboard</field>
+            <field name="arch" type="xml">
+                <form string="Sales Dashboard">
+                    <div class="sales_dashboard_container">
+                        <div class="o_dashboard_action" name="sales_dashboard"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
